@@ -40,18 +40,6 @@ namespace TreeViewDemo.Common.Commond
     {
         private readonly Action _execute;
         private readonly Func<bool> _canExecute;
-        private DelegateCommand ensure;
-        private Action<Window> cancel;
-
-        public DelegateCommand(DelegateCommand ensure)
-        {
-            this.ensure = ensure;
-        }
-
-        public DelegateCommand(Action<Window> cancel)
-        {
-            this.cancel = cancel;
-        }
 
         public DelegateCommand(Action execute, Func<bool> canExecute = null)
         {
