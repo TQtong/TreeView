@@ -66,8 +66,8 @@ namespace TreeViewDemo.ViewModels
 
         public TreeViewModel()
         {
-            AddChildNode = new DelegateCommand<TreeModel>(AddChild);
             AddRootNode = new DelegateCommand(AddRoot);
+            AddChildNode = new DelegateCommand<TreeModel>(AddChild);
             DeleteNode = new DelegateCommand<TreeModel>(Delete);
             ReNameNode = new DelegateCommand<TreeModel>(ReName);
             FinishReNameNode = new DelegateCommand<TreeModel>(FinishReName);
@@ -99,8 +99,6 @@ namespace TreeViewDemo.ViewModels
             TreeModels.Add(new TreeModel()
             {
                 Name = "我是根节点",
-                NodeType = Common.Enums.TreeNodeType.RootNode,
-                ParentNode = null
             }); ;
         }
 

@@ -64,7 +64,8 @@
             ItemsSource="{Binding TreeModels}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseRightButtonUp">
-                    <i:InvokeCommandAction Command="{Binding DataContext.MouseRightButtonUp, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" CommandParameter="{Binding ElementName=treeView}" />
+                    <i:InvokeCommandAction Command="{Binding DataContext.MouseRightButtonUp, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
+                                           CommandParameter="{Binding ElementName=treeView}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
             <TreeView.ItemTemplate>
@@ -76,7 +77,8 @@
                             Visibility="{Binding IsTextBoxVisibility}">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="TextChanged">
-                                    <i:InvokeCommandAction Command="{Binding DataContext.TextChanged, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" CommandParameter="{Binding ElementName=textBox}" />
+                                    <i:InvokeCommandAction Command="{Binding DataContext.TextChanged, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" 
+                                                           CommandParameter="{Binding ElementName=textBox}" />
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                             <TextBox.InputBindings>
